@@ -1,0 +1,393 @@
+object formInicial: TformInicial
+  Left = 271
+  Top = 98
+  BorderStyle = bsSingle
+  Caption = 'Principal'
+  ClientHeight = 567
+  ClientWidth = 1118
+  Color = clBtnFace
+  Constraints.MinHeight = 500
+  Constraints.MinWidth = 1050
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -13
+  Font.Name = 'Arial'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  Scaled = False
+  WindowState = wsMaximized
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  OnShow = FormShow
+  DesignSize = (
+    1118
+    567)
+  PixelsPerInch = 96
+  TextHeight = 16
+  object Bevel1: TBevel
+    Left = 512
+    Top = 8
+    Width = 597
+    Height = 491
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Shape = bsFrame
+  end
+  object Bevel2: TBevel
+    Left = 520
+    Top = 112
+    Width = 581
+    Height = 89
+    Anchors = [akLeft, akTop, akRight]
+    Shape = bsFrame
+  end
+  object labelMensagemBd: TLabel
+    Left = 8
+    Top = 511
+    Width = 194
+    Height = 16
+    Anchors = [akLeft, akBottom]
+    Caption = 'Banco de dados desconectado'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = [fsBold, fsUnderline]
+    ParentFont = False
+  end
+  object labelMensagemDiretorio: TLabel
+    Left = 8
+    Top = 546
+    Width = 59
+    Height = 16
+    Anchors = [akLeft, akBottom]
+    Caption = 'Diret'#243'rio:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label1: TLabel
+    Left = 528
+    Top = 120
+    Width = 113
+    Height = 23
+    Caption = 'Receitas'
+    Constraints.MaxWidth = 113
+    Constraints.MinWidth = 113
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 1004
+    Top = 120
+    Width = 88
+    Height = 23
+    Alignment = taRightJustify
+    Anchors = [akTop, akRight]
+    Caption = 'Despesas'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object labelDespesas: TLabel
+    Left = 965
+    Top = 160
+    Width = 127
+    Height = 32
+    Alignment = taRightJustify
+    Anchors = [akTop, akRight]
+    BiDiMode = bdLeftToRight
+    Caption = 'Despesas'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -27
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentBiDiMode = False
+    ParentFont = False
+  end
+  object labelReceitas: TLabel
+    Left = 528
+    Top = 160
+    Width = 112
+    Height = 32
+    Caption = 'Receitas'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -27
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Bevel3: TBevel
+    Left = 520
+    Top = 208
+    Width = 581
+    Height = 89
+    Anchors = [akLeft, akTop, akRight]
+    Shape = bsFrame
+  end
+  object Label3: TLabel
+    Left = 528
+    Top = 216
+    Width = 185
+    Height = 23
+    Caption = 'Despesas pendentes'
+    Constraints.MaxWidth = 185
+    Constraints.MinWidth = 185
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object labelPendentes: TLabel
+    Left = 528
+    Top = 256
+    Width = 87
+    Height = 32
+    Caption = 'Label3'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -27
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object labelBalanco: TLabel
+    Left = 656
+    Top = 160
+    Width = 287
+    Height = 32
+    Alignment = taCenter
+    Anchors = [akLeft, akTop, akRight]
+    AutoSize = False
+    Caption = 'labelBalanco'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -27
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 656
+    Top = 120
+    Width = 281
+    Height = 23
+    Alignment = taCenter
+    Anchors = [akLeft, akTop, akRight]
+    AutoSize = False
+    Caption = 'Balan'#231'o'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object btnInserirTransacao: TBitBtn
+    Left = 88
+    Top = 8
+    Width = 80
+    Height = 40
+    Caption = 'Despesas'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+    OnClick = btnInserirTransacaoClick
+  end
+  object btnInserirCategoria: TBitBtn
+    Left = 168
+    Top = 8
+    Width = 80
+    Height = 40
+    Caption = 'Or'#231'amento'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+    OnClick = btnInserirCategoriaClick
+  end
+  object btnInserirReceita: TBitBtn
+    Left = 8
+    Top = 8
+    Width = 80
+    Height = 40
+    Caption = 'Receitas'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+    OnClick = btnInserirReceitaClick
+  end
+  object btnAbreSlcBD: TBitBtn
+    Left = 918
+    Top = 511
+    Width = 91
+    Height = 44
+    Anchors = [akRight, akBottom]
+    Caption = '&Alt. Base'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+    OnClick = btnAbreSlcBDClick
+    Kind = bkRetry
+  end
+  object cbMeses: TComboBox
+    Left = 592
+    Top = 64
+    Width = 419
+    Height = 31
+    Cursor = crHandPoint
+    BevelInner = bvNone
+    Anchors = [akLeft, akTop, akRight]
+    BiDiMode = bdLeftToRight
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'Arial'
+    Font.Style = []
+    ItemHeight = 23
+    ParentBiDiMode = False
+    ParentFont = False
+    TabOrder = 4
+    OnChange = cbMesesChange
+    Items.Strings = (
+      'Janeiro'
+      'Fevereiro'
+      'Mar'#231'o'
+      'Abril'
+      'Maio'
+      'Junho'
+      'Julho'
+      'Agosto'
+      'Setembro'
+      'Outubro'
+      'Novembro'
+      'Dezembro')
+  end
+  object cbAnos: TComboBox
+    Left = 632
+    Top = 24
+    Width = 339
+    Height = 31
+    Cursor = crHandPoint
+    BevelInner = bvNone
+    Anchors = [akLeft, akTop, akRight]
+    BiDiMode = bdLeftToRight
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'Arial'
+    Font.Style = []
+    ItemHeight = 23
+    ParentBiDiMode = False
+    ParentFont = False
+    TabOrder = 5
+    OnChange = cbAnosChange
+  end
+  object chatDespesaCategoria: TDBChart
+    Left = 8
+    Top = 296
+    Width = 497
+    Height = 202
+    BackWall.Brush.Color = clWhite
+    LeftWall.Brush.Color = clWhite
+    MarginBottom = 0
+    MarginLeft = 0
+    MarginRight = 5
+    MarginTop = 0
+    Title.Font.Charset = DEFAULT_CHARSET
+    Title.Font.Color = clBlack
+    Title.Font.Height = -13
+    Title.Font.Name = 'Arial'
+    Title.Font.Style = [fsBold]
+    Title.Text.Strings = (
+      'DESPESA POR CATEGORIA')
+    Legend.Alignment = laBottom
+    Legend.ShadowSize = 0
+    Legend.Visible = False
+    View3D = False
+    View3DOptions.Elevation = 315
+    View3DOptions.Orthogonal = False
+    View3DOptions.Perspective = 0
+    View3DOptions.Rotation = 360
+    View3DOptions.Zoom = 103
+    TabOrder = 6
+    Anchors = [akLeft, akTop, akBottom]
+    object Series1: TBarSeries
+      ColorEachPoint = True
+      Cursor = crArrow
+      Marks.ArrowLength = 8
+      Marks.Style = smsLabelValue
+      Marks.Visible = True
+      SeriesColor = clRed
+      XValues.DateTime = False
+      XValues.Name = 'X'
+      XValues.Multiplier = 1.000000000000000000
+      XValues.Order = loAscending
+      YValues.DateTime = False
+      YValues.Name = 'Bar'
+      YValues.Multiplier = 1.000000000000000000
+      YValues.Order = loNone
+    end
+  end
+  object BitBtn1: TBitBtn
+    Left = 1016
+    Top = 511
+    Width = 91
+    Height = 44
+    Anchors = [akRight, akBottom]
+    Caption = '&Sair'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 7
+    OnClick = BitBtn1Click
+    Kind = bkCancel
+  end
+  object BitBtn2: TBitBtn
+    Left = 248
+    Top = 8
+    Width = 80
+    Height = 40
+    Caption = 'Balan'#231'os'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 8
+    OnClick = BitBtn2Click
+  end
+end
