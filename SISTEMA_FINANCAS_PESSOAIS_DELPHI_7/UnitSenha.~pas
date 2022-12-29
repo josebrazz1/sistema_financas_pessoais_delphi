@@ -129,8 +129,13 @@ end;
 
 procedure TformLogin.BitBtn2Click(Sender: TObject);
 begin
-  terminarApNoInicio := True;
-  ModalResult := mrOk;
+  if primeiroAcesso then
+  begin
+    terminarApNoInicio := True;
+    ModalResult := mrOk;
+  end
+  else
+    Self.Close;
 end;
 
 end.

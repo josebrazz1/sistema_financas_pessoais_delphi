@@ -1,6 +1,6 @@
 object formSelecaoBaseDados: TformSelecaoBaseDados
-  Left = 518
-  Top = 153
+  Left = 569
+  Top = 200
   BorderStyle = bsSingle
   Caption = 'Sele'#231#227'o da base de dados'
   ClientHeight = 261
@@ -49,8 +49,8 @@ object formSelecaoBaseDados: TformSelecaoBaseDados
     TabOrder = 0
     OnChange = cbSelecaoBDChange
     Items.Strings = (
-      'FINANCAS_PESSOAIS_BD1_TESTE.mdb'
-      'FINANCAS_PESSOAIS_BD1_PRINCIPAL.mdb')
+      'DB.mdb'
+      '')
   end
   object BitBtn1: TBitBtn
     Left = 24

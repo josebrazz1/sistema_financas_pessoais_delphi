@@ -1,6 +1,6 @@
 object formAlterarDeletar: TformAlterarDeletar
-  Left = 341
-  Top = 269
+  Left = 235
+  Top = 231
   Width = 924
   Height = 480
   Caption = 'Edi'#231#227'o'

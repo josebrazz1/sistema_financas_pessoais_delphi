@@ -1,6 +1,6 @@
 object formInicial: TformInicial
-  Left = 271
-  Top = 98
+  Left = 136
+  Top = 116
   BorderStyle = bsSingle
   Caption = 'Principal'
   ClientHeight = 567
@@ -256,6 +256,7 @@ object formInicial: TformInicial
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 3
+    Visible = False
     OnClick = btnAbreSlcBDClick
     Kind = bkRetry
   end
@@ -314,9 +315,9 @@ object formInicial: TformInicial
   end
   object chatDespesaCategoria: TDBChart
     Left = 8
-    Top = 296
+    Top = 56
     Width = 497
-    Height = 202
+    Height = 442
     BackWall.Brush.Color = clWhite
     LeftWall.Brush.Color = clWhite
     MarginBottom = 0

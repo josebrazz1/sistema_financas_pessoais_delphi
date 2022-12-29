@@ -44,7 +44,7 @@ begin
   begin
     if formSelecaoBaseDados.conectaBD then
     begin
-      formInicial.labelMensagemBd.Caption := 'Banco de dados: G:\Meu Drive\BANCO_DE_DADOS_PRODUCAO\' + bdAlias;
+      formInicial.labelMensagemBd.Caption := diretorioBd + bdAlias;
       formInicial.labelMensagemDiretorio.Caption := 'Diretório da aplicação: ' + ExpandFileName(ParamStr(0));
 
       if not formInicial.Active then

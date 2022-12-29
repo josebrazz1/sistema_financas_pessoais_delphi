@@ -1,9 +1,9 @@
-object Form1: TForm1
-  Left = 295
-  Top = 170
+object formAlterarDeletar: TformAlterarDeletar
+  Left = 270
+  Top = 154
   Width = 924
   Height = 480
-  Caption = 'Form1'
+  Caption = 'Edi'#231#227'o'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

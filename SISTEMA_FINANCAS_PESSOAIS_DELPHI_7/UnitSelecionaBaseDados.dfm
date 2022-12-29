@@ -45,12 +45,13 @@ object formSelecaoBaseDados: TformSelecaoBaseDados
     Font.Name = 'Arial'
     Font.Style = []
     ItemHeight = 16
+    ItemIndex = 0
     ParentFont = False
     TabOrder = 0
+    Text = 'DB.mdb'
     OnChange = cbSelecaoBDChange
     Items.Strings = (
-      'FINANCAS_PESSOAIS_BD1_TESTE.mdb'
-      'FINANCAS_PESSOAIS_BD1_PRINCIPAL.mdb')
+      'DB.mdb')
   end
   object BitBtn1: TBitBtn
     Left = 24
@@ -81,6 +82,7 @@ object formSelecaoBaseDados: TformSelecaoBaseDados
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 2
+    Visible = False
   end
   object BitBtn3: TBitBtn
     Left = 25

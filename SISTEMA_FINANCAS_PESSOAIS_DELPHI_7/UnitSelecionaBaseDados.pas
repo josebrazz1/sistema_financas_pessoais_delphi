@@ -58,23 +58,14 @@ begin
       try
 
         if not usuarioOuSenhaIncorretos then
-          dmDados.bdCon.ConnectionString := 'Provider=Microsoft.Jet.OLEDB.4.0;Password="";Data Source=G:\Meu Drive\BANCO_DE_DADOS_PRODUCAO\' + bdAlias + ';Persist Security Info=True'
+          dmDados.bdCon.ConnectionString := 'Provider=Microsoft.Jet.OLEDB.4.0;Password="";Data Source=' + diretorioBd + bdAlias + ';Persist Security Info=True'
         else
-          dmDados.bdCon.ConnectionString := 'Provider=Microsoft.Jet.OLEDB.4.0;Password="";Data Source=G:\Meu Drive\BANCO_DE_DADOS_PRODUCAO\FINANCAS_PESSOAIS_BD1_TESTE.mdb;Persist Security Info=True';
+          dmDados.bdCon.ConnectionString := 'Provider=Microsoft.Jet.OLEDB.4.0;Password="";Data Source='+ diretorioBd + bdAlias +';Persist Security Info=True';
 
         dmDados.bdCon.Connected := true;
       Except on e : Exception do
         begin
-          ShowMessage('Banco de dados não encontado' + sLineBreak + sLineBreak +
-
-          'Verifique se o client do Google Drive está instalado e inicializado e siga os seguintes passos: '+ sLineBreak + sLineBreak +
-
-          '1 - Faça login na conta "finanças.pessoais.app@gmail.com"' + sLineBreak +
-          '2 - Mude a letra da unidade criada em "Este Computador" para "G"' + sLineBreak + sLineBreak +
-
-          'O caminho para o banco de dados deve ficar da seguinte forma: "G:\Meu Drive\BANCO_DE_DADOS_PRODUCAO".' + sLineBreak + sLineBreak +
-
-          'A aplicação será fechada.');
+          ShowMessage('Banco de dados não encontado');
 
           Application.Terminate;
           Result := False;
@@ -99,20 +90,13 @@ procedure TformSelecaoBaseDados.BitBtn1Click(Sender: TObject);
 begin
   baseDadosSelecionada := cbSelecaoBD.Text;
 
-  if baseDadosSelecionada = 'FINANCAS_PESSOAIS_BD1_PRINCIPAL.mdb' then
-    formLogin.ShowModal
-  else
+  if conectaBD then
   begin
-    if conectaBD then
-    begin
-      formInicial.labelMensagemBd.Caption := 'Banco de dados: G:\Meu Drive\BANCO_DE_DADOS_PRODUCAO\' + bdAlias;
-      formInicial.labelMensagemDiretorio.Caption := 'Diretório da aplicação: ' + ExpandFileName(ParamStr(0));
-      ShowMessage('Conectado com sucesso no alias: '+ bdAlias);
-      Release;
-      //formInicial.ShowModal;
-    end
-    else
-      ShowMessage('Não foi possível realizar a conexão com o banco de dados!');
+    formInicial.labelMensagemBd.Caption := diretorioBd + bdAlias;
+    formInicial.labelMensagemDiretorio.Caption := 'Diretório da aplicação: ' + ExpandFileName(ParamStr(0));
+    ShowMessage('Conectado com sucesso no alias: '+ bdAlias);
+    Release;
+    //formInicial.ShowModal;
   end;
 end;
 
